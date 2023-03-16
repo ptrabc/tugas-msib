@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pertemuan 4</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Kalkulator </h1>
+    <form name="myForm" onsubmit="return validateForm()" method="post" id="kalkulator" required>
+      Angka 1 :
+      <input
+        type="text"
+        name="angka"
+        placeholder="masukan angka pertama"
+      /><br />
+      Angka 2 :
+      <input
+        type="text"
+        name="angka2"
+        placeholder="masukan angka kedua"
+      /><br />
+      Hasil :
+      <input type="text" name="hasil" id="fname" value="" disabled /> <br />
+
+      <button type="button" name="btn_tambah" onclick="tambah();validation();">+</button>
+      <button type="button" name="btn_tambah" onclick="kurang();validation();">-</button>
+      <button type="button" name="btn_tambah" onclick="bagi();validation();">/</button>
+      <button type="button" name="btn_tambah" onclick="kali();validation();">*</button>
+      <button type="button" name="btn_tambah" onclick="pangkat();validation();">**</button>
+    </form>
+    <script src="js/kalkulator.js"></script>
+  </body>
+</html>
