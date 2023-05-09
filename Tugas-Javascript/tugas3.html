@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3 JS</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    let s1 = {nama:"Alya", nilai:90};
+    let s2 = {nama:"Babayo", nilai:75};
+    let s3 = {nama:"Ipul", nilai:58};
+    let s4 = {nama:"Stevani", nilai:83};
+    let s5 = {nama:"Budi", nilai:63};
+
+    let students = [s1,s2,s3,s4,s5];
+    
+</script>
+<h3>
+    <table style="padding: 10px; text-align: center; width: 50%;">
+        <thead style="background-color: rgb(216, 152, 14);">
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+                <th>Keterangan</th>
+                <th>Grade</th>
+                <th>predikat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+           
+
+            var no = 1, warna;
+            for (s of students){
+                let ket = (s.nilai >= 70) ? "Lulus" : "Gagal";
+                let warna = (s.nilai >= 70) ? 'aqua' : 'red';
+                let grade='';
+
+                if (s.nilai > 90 && s.nilai <= 100) grade = "A";
+                else if (s.nilai > 80 && s.nilai <= 90) grade = "B";
+                else if (s.nilai > 70 && s.nilai <= 80) grade = "C";
+                else if (s.nilai >= 60 && s.nilai <= 70) grade = "D";
+                else if (s.nilai >= 0 && s.nilai <= 59) grade = "E";
+
+                switch (grade){
+                case "A": predikat ="Memuaskan"; break;
+                case "B": predikat ="Baik"; break;
+                case "C": predikat ="Cukup"; break;
+                case "D": predikat ="Kurang"; break;
+                case "E": predikat ="Sangat Kurang"; break;
+            }
+
+                document.write(`<tr bgcolor="${warna}">
+                <td>${no++}</td>
+                <td>${s.nama}</td>
+                <td>${s.nilai}</td>
+                <td>${ket}</td>
+                <td>${grade}</td>
+                <td>${predikat}</td>
+            </tr>`);
+            }
+
+        //         var no = 1, warna;
+        //         for (s of students){
+
+        //             // let ket = (s.nilai >= 60)? "Lulus" : "Gagal";
+        //             // let (warna >= 60) ? "yellow" : "Red" ;
+        //             // warna = (no % 2 == 0) ? 'yellow' : 'red';
+        //             document.write(`<tr bgcolor="${warna}">
+        //         <td>${no++}</td>
+        //         <td>${s.nama}</td>
+        //         <td>${s.nilai}</td>
+        //         <td>${ket}</td>
+        //     </tr>`);
+        // }
+
+        // for (no =1; no <=20; no++){
+        //             warna = (no % 2 == 0) ? 'yellow' : 'blue';
+        //             document.write(`<tr bgcolor="${warna}"> 
+        //                 <td>${no}</td>
+        //                 <td> Mahasiswa ${no}</td>
+        //                 <td>jl. ir soetami ${no}</td>
+        //                 </tr>`);
+        //         }
+</script>
+</html>
